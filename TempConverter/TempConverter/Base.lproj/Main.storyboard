@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <accessibilityOverrides dynamicTypePreference="2"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TempConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="macos" translatesAutoresizingMaskIntoConstraints="NO" id="yvt-8R-QxN" userLabel="image">
+                                <rect key="frame" x="-145" y="-39" width="1425" height="965"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp-Converter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="DLh-RX-yzi">
+                                <rect key="frame" x="54" y="66" width="320" height="45"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32ºF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21Z-bS-Edp">
+                                <rect key="frame" x="178" y="498" width="72" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kxX-ay-ULB">
+                                <rect key="frame" x="105" y="448" width="218" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="214" id="wIp-iM-qNF"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="UCK-3K-Rgw"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0ºC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiq-fU-XFV">
+                                <rect key="frame" x="185" y="386" width="58" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="yvt-8R-QxN" secondAttribute="trailing" constant="-852" id="3E0-Pf-HiK"/>
+                            <constraint firstItem="21Z-bS-Edp" firstAttribute="top" secondItem="kxX-ay-ULB" secondAttribute="bottom" constant="20" id="6bR-sc-ISg"/>
+                            <constraint firstItem="kxX-ay-ULB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="D7n-py-O9S"/>
+                            <constraint firstItem="kxX-ay-ULB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DHd-k1-pLh"/>
+                            <constraint firstItem="hiq-fU-XFV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DTD-76-cxw"/>
+                            <constraint firstItem="DLh-RX-yzi" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Omz-C7-3MG"/>
+                            <constraint firstItem="yvt-8R-QxN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-39" id="Tbw-mc-znl"/>
+                            <constraint firstItem="DLh-RX-yzi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="YYJ-rs-AdF"/>
+                            <constraint firstItem="21Z-bS-Edp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="f2J-ss-6sm"/>
+                            <constraint firstItem="yvt-8R-QxN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-145" id="tBb-LN-BVW"/>
+                            <constraint firstAttribute="bottom" secondItem="yvt-8R-QxN" secondAttribute="bottom" id="uo9-yM-QLj"/>
+                            <constraint firstItem="kxX-ay-ULB" firstAttribute="top" secondItem="hiq-fU-XFV" secondAttribute="bottom" constant="20" id="uqB-sn-jmz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cLabel" destination="hiq-fU-XFV" id="wYY-NW-6EF"/>
+                        <outlet property="fLabel" destination="21Z-bS-Edp" id="uO8-j9-fVu"/>
+                        <outlet property="slider" destination="kxX-ay-ULB" id="4Yo-vX-xUX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="71.495327102803728" y="31.101511879049678"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="macos" width="1280" height="720"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
